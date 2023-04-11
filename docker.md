@@ -1,9 +1,8 @@
 <p style="text-align:center;"><img title="a title" alt="Alt text" src="/docker-resources/docker-logo-small.jpeg"></p?>
 
+# Docker on PlayPen
 
-# Docker on PlayPen                         
-
-## What are Containers 
+## What are Containers
 
 Containers are a way of packaging software in a way that allows it to run consistently across different environments, such as a developer's laptop, a testing environment, or a production server. Containers allow you to isolate an application and its dependencies into a self-contained unit that can be easily deployed, managed, and scaled.
 
@@ -15,17 +14,17 @@ Containers are typically created using containerization platforms, such as Docke
 
 Overall, containers provide a lightweight, portable, and consistent way to package and deploy applications, making them an ideal solution for modern application development and deployment.
 
-## Containers vs Virtual Machines 
+## Containers vs Virtual Machines
 
 Containers and virtual machines are both ways of abstracting and isolating applications from the underlying system, but there are some key differences between the two:
 
-* **Architecture:** Virtual machines (VMs) use hardware-level virtualization to create a virtualized environment that includes a guest operating system and any necessary dependencies. Containers, on the other hand, use operating system-level virtualization to create a lightweight, isolated environment that shares the host operating system kernel.
+- **Architecture:** Virtual machines (VMs) use hardware-level virtualization to create a virtualized environment that includes a guest operating system and any necessary dependencies. Containers, on the other hand, use operating system-level virtualization to create a lightweight, isolated environment that shares the host operating system kernel.
 
-* **Resource Usage:** VMs require a full operating system to be installed for each virtual machine, which can be resource-intensive and result in significant overhead. Containers, on the other hand, share the underlying host operating system, which makes them much more lightweight and efficient in terms of resource usage.
+- **Resource Usage:** VMs require a full operating system to be installed for each virtual machine, which can be resource-intensive and result in significant overhead. Containers, on the other hand, share the underlying host operating system, which makes them much more lightweight and efficient in terms of resource usage.
 
-* **Portability:** VMs are typically less portable than containers because they require a complete operating system to be installed, which can make them more difficult to move between different environments. Containers, on the other hand, are designed to be portable, since they include only the dependencies needed to run the application and can be easily moved between different environments.
+- **Portability:** VMs are typically less portable than containers because they require a complete operating system to be installed, which can make them more difficult to move between different environments. Containers, on the other hand, are designed to be portable, since they include only the dependencies needed to run the application and can be easily moved between different environments.
 
-* **Management:** VMs require a hypervisor to manage the virtualized environment, which can add complexity to the management of virtual machines. Containers, on the other hand, are managed through containerization platforms like Docker, which provide tools for building, running, and managing containers.
+- **Management:** VMs require a hypervisor to manage the virtualized environment, which can add complexity to the management of virtual machines. Containers, on the other hand, are managed through containerization platforms like Docker, which provide tools for building, running, and managing containers.
 
 Overall, containers are a more lightweight, efficient, and portable way of packaging and deploying applications than virtual machines, making them an ideal solution for modern application development and deployment. However, virtual machines still have their place in certain scenarios, such as when multiple operating systems or hardware environments are needed.
 
@@ -51,7 +50,7 @@ The architecture of Docker consists of several components that work together to 
 
 Overall, the Docker architecture provides a powerful and flexible platform for containerization, enabling developers to easily create and manage containerized applications with a high level of security and flexibility.
 
-## Installing Docker on a PlayPen Virtual Machine (Ubuntu) 
+## Installing Docker on a PlayPen Virtual Machine (Ubuntu)
 
 Best way to learn docker is to get your hands dirty , so launch a playpen ( GCP or Azure ) and launch a Virtual Machine with an Ubuntu Image , If you are not sure how to do this , please refer GCP or Azure Tutorials under Incubation Lab.
 
@@ -104,11 +103,9 @@ This will download a test Docker image and run it in a container. If everything 
 
 That's it! Docker is now installed on your Ubuntu system.
 
-
 **Here's a brief tutorial on getting started with Docker:**
 
-**Install Docker:** The first step is to install Docker on your machine. 
-
+**Install Docker:** The first step is to install Docker on your machine.
 
 **Create a Dockerfile:** A Dockerfile is a script that specifies the configuration of a Docker image. Create a new file called Dockerfile in your project directory and add the following lines:
 
@@ -133,6 +130,7 @@ docker build -t myapp .
 This will build a Docker image named myapp based on the instructions in the Dockerfile.
 
 **Run the Docker container:** Run the following command to start a container based on the myapp image:
+
 ```arduino
 Copy code
 docker run -p 5000:5000 myapp
@@ -146,63 +144,60 @@ That's it! This is just a simple example of how to use Docker, but it demonstrat
 
 **Commonly Used Docker Commands**
 
-```docker run```: This command is used to run a container from a Docker image.
+`docker run`: This command is used to run a container from a Docker image.
 
-```docker ps```: This command lists all the running containers.
+`docker ps`: This command lists all the running containers.
 
-```docker images```: This command lists all the Docker images that are currently stored on the system.
+`docker images`: This command lists all the Docker images that are currently stored on the system.
 
-```docker pull```: This command is used to download a Docker image from a registry.
+`docker pull`: This command is used to download a Docker image from a registry.
 
-```docker build```: This command is used to build a Docker image from a Dockerfile.
+`docker build`: This command is used to build a Docker image from a Dockerfile.
 
-```docker stop```: This command is used to stop a running container.
+`docker stop`: This command is used to stop a running container.
 
-```docker rm```: This command is used to remove a container.
+`docker rm`: This command is used to remove a container.
 
-```docker rmi```: This command is used to remove a Docker image.
+`docker rmi`: This command is used to remove a Docker image.
 
-```docker exec```: This command is used to run a command inside a running container.
+`docker exec`: This command is used to run a command inside a running container.
 
-```docker logs```: This command is used to view the logs of a container.
+`docker logs`: This command is used to view the logs of a container.
 
-These are just a few of the most commonly used Docker commands. There are many other Docker commands available, depending on your use case. You can view the complete list of commands by running ```docker --help```.
+These are just a few of the most commonly used Docker commands. There are many other Docker commands available, depending on your use case. You can view the complete list of commands by running `docker --help`.
 
-***
+---
 
 **Here are some resources you can use to learn Docker:**
 
-* **Docker documentation:** The official Docker documentation is a great place to start learning about Docker. It includes a comprehensive guide to Docker and its components, as well as tutorials and examples.
+- **Docker documentation:** The official Docker documentation is a great place to start learning about Docker. It includes a comprehensive guide to Docker and its components, as well as tutorials and examples.
 
-* **Docker Getting Started guide:** This guide provides step-by-step instructions on how to use Docker to build and deploy applications.
+- **Docker Getting Started guide:** This guide provides step-by-step instructions on how to use Docker to build and deploy applications.
 
-* **Docker YouTube channel:** The Docker YouTube channel has a variety of videos and tutorials that cover Docker basics, as well as more advanced topics.
+- **Docker YouTube channel:** The Docker YouTube channel has a variety of videos and tutorials that cover Docker basics, as well as more advanced topics.
 
-* **Docker Mastery course on Udemy:** This course covers everything you need to know to use Docker effectively, including how to build and deploy applications with Docker.
+- **Docker Mastery course on Udemy:** This course covers everything you need to know to use Docker effectively, including how to build and deploy applications with Docker.
 
-* **Docker for Developers course on Pluralsight:** This course is aimed at developers and covers how to use Docker to create and deploy applications.
+- **Docker for Developers course on Pluralsight:** This course is aimed at developers and covers how to use Docker to create and deploy applications.
 
-* **Docker Cookbook:** This book provides recipes for using Docker to solve common problems and perform common tasks.
+- **Docker Cookbook:** This book provides recipes for using Docker to solve common problems and perform common tasks.
 
 These resources should give you a solid foundation in Docker and help you get started with using it.
-          
 
-***
+---
 
 **Here are some Docker reference materials you can use:**
 
-* **Docker documentation:** The official Docker documentation provides detailed information on how to use Docker and its components.
+- **Docker documentation:** The official Docker documentation provides detailed information on how to use Docker and its components.
 
-* **Docker Hub:** Docker Hub is a registry of Docker images that you can use as a base for your own images. It also provides a platform for sharing and discovering Docker images.
+- **Docker Hub:** Docker Hub is a registry of Docker images that you can use as a base for your own images. It also provides a platform for sharing and discovering Docker images.
 
-* **Dockerfile reference:** The Dockerfile reference provides detailed information on how to write Dockerfiles, which are used to build Docker images.
+- **Dockerfile reference:** The Dockerfile reference provides detailed information on how to write Dockerfiles, which are used to build Docker images.
 
-* **Docker Compose documentation:** Docker Compose is a tool for defining and running multi-container Docker applications. The Docker Compose documentation provides information on how to use this tool.
+- **Docker Compose documentation:** Docker Compose is a tool for defining and running multi-container Docker applications. The Docker Compose documentation provides information on how to use this tool.
 
-* **Docker API documentation:** The Docker API documentation provides information on how to use the Docker API, which allows you to programmatically interact with Docker.
+- **Docker API documentation:** The Docker API documentation provides information on how to use the Docker API, which allows you to programmatically interact with Docker.
 
-* **Docker security documentation:** Docker security documentation provides information on how to secure Docker deployments and best practices for securing Docker containers.
+- **Docker security documentation:** Docker security documentation provides information on how to secure Docker deployments and best practices for securing Docker containers.
 
 These reference materials should provide you with the information you need to work with Docker effectively and securely.
-          
-
