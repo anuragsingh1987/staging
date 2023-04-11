@@ -143,3 +143,65 @@ This will start a container based on the myapp image and map port 5000 from the 
 Test the app: Open a web browser and navigate to http://localhost:5000 to test the app running inside the Docker container.
 
 That's it! This is just a simple example of how to use Docker, but it demonstrates the basic workflow for building and running Docker images and containers. There's a lot more you can do with Docker, including deploying containers to a production environment, managing Docker networks and volumes, and more.
+
+**Commonly Used Docker Commands**
+
+```docker run```: This command is used to run a container from a Docker image.
+
+```docker ps```: This command lists all the running containers.
+
+```docker images```: This command lists all the Docker images that are currently stored on the system.
+
+```docker pull```: This command is used to download a Docker image from a registry.
+
+```docker build```: This command is used to build a Docker image from a Dockerfile.
+
+```docker stop```: This command is used to stop a running container.
+
+```docker rm```: This command is used to remove a container.
+
+```docker rmi```: This command is used to remove a Docker image.
+
+```docker exec```: This command is used to run a command inside a running container.
+
+```docker logs```: This command is used to view the logs of a container.
+
+These are just a few of the most commonly used Docker commands. There are many other Docker commands available, depending on your use case. You can view the complete list of commands by running ```docker --help```.
+
+
+**Here are some resources you can use to learn Docker:**
+
+**Docker documentation:** The official Docker documentation is a great place to start learning about Docker. It includes a comprehensive guide to Docker and its components, as well as tutorials and examples.
+
+**Docker Getting Started guide:** This guide provides step-by-step instructions on how to use Docker to build and deploy applications.
+
+**Docker YouTube channel:** The Docker YouTube channel has a variety of videos and tutorials that cover Docker basics, as well as more advanced topics.
+
+**Docker Mastery course on Udemy:** This course covers everything you need to know to use Docker effectively, including how to build and deploy applications with Docker.
+
+**Docker for Developers course on Pluralsight:** This course is aimed at developers and covers how to use Docker to create and deploy applications.
+
+**Docker Cookbook:** This book provides recipes for using Docker to solve common problems and perform common tasks.
+
+These resources should give you a solid foundation in Docker and help you get started with using it.
+          
+
+***
+
+**Here are some Docker reference materials you can use:**
+
+* **Docker documentation:** The official Docker documentation provides detailed information on how to use Docker and its components.
+
+* **Docker Hub:** Docker Hub is a registry of Docker images that you can use as a base for your own images. It also provides a platform for sharing and discovering Docker images.
+
+* **Dockerfile reference:** The Dockerfile reference provides detailed information on how to write Dockerfiles, which are used to build Docker images.
+
+* **Docker Compose documentation:** Docker Compose is a tool for defining and running multi-container Docker applications. The Docker Compose documentation provides information on how to use this tool.
+
+* **Docker API documentation:** The Docker API documentation provides information on how to use the Docker API, which allows you to programmatically interact with Docker.
+
+* **Docker security documentation:** Docker security documentation provides information on how to secure Docker deployments and best practices for securing Docker containers.
+
+These reference materials should provide you with the information you need to work with Docker effectively and securely.
+          
+
