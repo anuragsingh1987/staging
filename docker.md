@@ -103,7 +103,7 @@ This will download a test Docker image and run it in a container. If everything 
 
 That's it! Docker is now installed on your Ubuntu system.
 
-**Here's a brief tutorial on getting started with Docker:**
+## Getting Started with Docker
 
 **Install Docker:** The first step is to install Docker on your machine.
 
@@ -138,9 +138,11 @@ docker run -p 5000:5000 myapp
 
 This will start a container based on the myapp image and map port 5000 from the container to port 5000 on the host machine.
 
-Test the app: Open a web browser and navigate to http://localhost:5000 to test the app running inside the Docker container.
+**Test the app:** Open a web browser and navigate to http://localhost:5000 to test the app running inside the Docker container.
 
 That's it! This is just a simple example of how to use Docker, but it demonstrates the basic workflow for building and running Docker images and containers. There's a lot more you can do with Docker, including deploying containers to a production environment, managing Docker networks and volumes, and more.
+
+---
 
 **Commonly Used Docker Commands**
 
@@ -264,7 +266,7 @@ In this modified ```Dockerfile```, we first use the ```node:14``` base image to 
 
 
 
-**Now here is another challenge for you to try **
+**Now here is another challenge for you to try**
 
 Create a Docker container that runs a simple Python web application that prints "Hello, World!" to the browser when accessed. The web application should run on port 8080.
 
@@ -279,7 +281,7 @@ Bonus challenge: Modify the Dockerfile to create a multi-stage build that first 
 
 ---
 
-**Here are some resources you can use to learn Docker:**
+## Here are some resources you can use to learn Docker:
 
 - **Docker documentation:** The official Docker documentation is a great place to start learning about Docker. It includes a comprehensive guide to Docker and its components, as well as tutorials and examples.
 
@@ -297,7 +299,7 @@ These resources should give you a solid foundation in Docker and help you get st
 
 ---
 
-**Here are some Docker reference materials you can use:**
+## Here are some Docker reference materials you can use:
 
 - **Docker documentation:** The official Docker documentation provides detailed information on how to use Docker and its components.
 
