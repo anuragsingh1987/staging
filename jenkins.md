@@ -9,13 +9,13 @@ This helps to improve the speed and quality of software development, as well as 
 
 ## What is CI/CD - Continuous Integration and Continuous Delivery (or Continuous Deployment)
 
-**CI/CD stands for Continuous Integration and Continuous Delivery (or Continuous Deployment)**, and it refers to the practice of continuously integrating and delivering software changes to production in an automated and efficient manner.
+* **CI/CD stands for Continuous Integration and Continuous Delivery (or Continuous Deployment)**, and it refers to the practice of continuously integrating and delivering software changes to production in an automated and efficient manner.
 
-**Continuous Integration (CI)** is the practice of continuously integrating changes made by developers into a central repository and automatically building, testing, and validating the changes. This helps to catch errors and conflicts early in the development process and ensures that the codebase remains stable and consistent.
+* **Continuous Integration (CI)** is the practice of continuously integrating changes made by developers into a central repository and automatically building, testing, and validating the changes. This helps to catch errors and conflicts early in the development process and ensures that the codebase remains stable and consistent.
 
-**Continuous Delivery (CD)** is the practice of continuously delivering the software changes to a production-like environment for further testing, validation, and verification. This includes automated testing, deployment, and release processes to ensure that the changes are ready to be deployed to production.
+* **Continuous Delivery (CD)** is the practice of continuously delivering the software changes to a production-like environment for further testing, validation, and verification. This includes automated testing, deployment, and release processes to ensure that the changes are ready to be deployed to production.
 
-**Continuous Deployment (CD)** takes this one step further by automating the release process to production. This ensures that the changes are deployed to production quickly and with minimal human intervention, reducing the risk of errors and increasing the speed of delivery.
+* **Continuous Deployment (CD)** takes this one step further by automating the release process to production. This ensures that the changes are deployed to production quickly and with minimal human intervention, reducing the risk of errors and increasing the speed of delivery.
 
 CI/CD enables development teams to deliver software changes to production faster, more reliably, and with higher quality. It also promotes collaboration and communication among team members, as well as providing transparency and visibility into the development process.
 
