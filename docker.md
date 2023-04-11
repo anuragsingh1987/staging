@@ -2,9 +2,9 @@
 
 # Docker on PlayPen
 
-***Please Note : Though this repository has been created considering users of all levels (beginners, intermediate and experts) , but it is recommended that before using the repo , you should complete a docker course offered by pluralsight which is available to all LGB employees. The course will provide all the required and idepth knowledge about docker and should be supplemented by hands On labs supplied as part of this repo.
+*Please Note : Though this repository has been created considering users of all levels (beginners, intermediate and experts) , but it is recommended that before using the repo , you should complete a docker course offered by pluralsight which is available to all LGB employees. The course will provide all the required and idepth knowledge about docker and should be supplemented by hands On labs supplied as part of this repo.
 
-Here is the course link and description -- > ***  <<Link to be added>>
+Here is the course link and description -- >   <<Link to be added>>*
 
 
 ## What are Containers
