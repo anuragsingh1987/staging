@@ -168,20 +168,21 @@ That's it! This is just a simple example of how to use Docker, but it demonstrat
 
 These are just a few of the most commonly used Docker commands. There are many other Docker commands available, depending on your use case. You can view the complete list of commands by running ```docker --help```.
 
+***
 
 **Here are some resources you can use to learn Docker:**
 
-**Docker documentation:** The official Docker documentation is a great place to start learning about Docker. It includes a comprehensive guide to Docker and its components, as well as tutorials and examples.
+* **Docker documentation:** The official Docker documentation is a great place to start learning about Docker. It includes a comprehensive guide to Docker and its components, as well as tutorials and examples.
 
-**Docker Getting Started guide:** This guide provides step-by-step instructions on how to use Docker to build and deploy applications.
+* **Docker Getting Started guide:** This guide provides step-by-step instructions on how to use Docker to build and deploy applications.
 
-**Docker YouTube channel:** The Docker YouTube channel has a variety of videos and tutorials that cover Docker basics, as well as more advanced topics.
+* **Docker YouTube channel:** The Docker YouTube channel has a variety of videos and tutorials that cover Docker basics, as well as more advanced topics.
 
-**Docker Mastery course on Udemy:** This course covers everything you need to know to use Docker effectively, including how to build and deploy applications with Docker.
+* **Docker Mastery course on Udemy:** This course covers everything you need to know to use Docker effectively, including how to build and deploy applications with Docker.
 
-**Docker for Developers course on Pluralsight:** This course is aimed at developers and covers how to use Docker to create and deploy applications.
+* **Docker for Developers course on Pluralsight:** This course is aimed at developers and covers how to use Docker to create and deploy applications.
 
-**Docker Cookbook:** This book provides recipes for using Docker to solve common problems and perform common tasks.
+* **Docker Cookbook:** This book provides recipes for using Docker to solve common problems and perform common tasks.
 
 These resources should give you a solid foundation in Docker and help you get started with using it.
           
