@@ -2,8 +2,12 @@
 
 # Jenkins on PlayPen                         
 
-## What is Jenkins 
+*Please Note : Though this repository has been created considering users of all levels (beginners, intermediate and experts) , but it is recommended that before using the repo , you should complete a docker course offered by pluralsight which is available to all LGB employees. The course will provide all the required and idepth knowledge about docker and should be supplemented by hands On labs supplied as part of this repo.*
 
+**Here is the course link and description -- >   <<Link to be added>>**  
+
+
+## What is Jenkins 
 
 Jenkins is an open-source automation server that is used to automate various aspects of software development, including building, testing, and deploying software. It was originally developed as a fork of the Hudson project, and is now maintained by the Jenkins community. Jenkins allows developers to set up continuous integration and continuous delivery (CI/CD) pipelines, which automate the process of building, testing, and deploying software. 
 
@@ -360,7 +364,7 @@ Here, the ```greet``` method has a default value of "world" for the ```name``` p
 
 Here's a step-by-step tutorial on how to use Groovy with Jenkins:
 
-1. **Install Jenkins:** If you haven't already, download and install Jenkins on your computer or server.
+1. **Install Jenkins:** If you haven't already, download and install Jenkins on your PlayPen VM. You would need to launch a VM 
 
 2. **Install the Groovy plugin:** In the Jenkins dashboard, go to Manage Jenkins &gt; Manage Plugins, and search for "Groovy". Install the Groovy plugin, and then restart Jenkins.
 
