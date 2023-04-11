@@ -35,7 +35,7 @@ Here are some Bash basics:
 These are just some of the basic features of Bash. As you become more familiar with Bash, you will learn more advanced features and techniques.
 
 
-# Bash and Shell Scripting - let's the the basics right
+# Bash and Shell Scripting - let's get the basics right
 
 Bash is a specific type of shell, and shell scripting refers to the practice of writing scripts that run on a shell. So in a sense, **Bash is a subset of shell scripting.**
 
@@ -48,7 +48,7 @@ Shell scripting, on the other hand, refers to the practice of writing scripts th
 In summary, Bash is a specific type of shell that is widely used in Unix-based operating systems, and shell scripting refers to the practice of writing scripts that run on a shell. While Bash is a popular choice for shell scripting, other shells can also be used, and scripts can be written in various languages.  
 
 
-**To write and run a Bash script, follow these steps:**
+# To write and run a Bash script, follow these steps:
 
 - **Open a text editor:** Bash scripts are plain text files, so you can use any text editor to write them. For example, you can use the built-in editor in your terminal, such as nano or vim, or a graphical text editor, such as gedit or Sublime Text.
 
@@ -67,9 +67,48 @@ echo "Hello, World!"
 ```
 
 Save this script as "hello.sh" and set it as executable using the command "chmod +x hello.sh". Then, run the script by typing "./hello.sh" in your terminal. You should see the output "Hello, World!" printed to the screen.  
+  
+**Here are some common Bash commands that you might find useful:**  
+
+**File and Directory Management**
+- cd [directory]: Change to the specified directory.
+- ls: List the files and directories in the current directory.
+- mkdir [directory]: Create a new directory with the specified name.
+- touch [filename]: Create a new file with the specified name.
+- cp [source] [destination]: Copy a file or directory from the source to the destination.
+- mv [source] [destination]: Move a file or directory from the source to the destination.
+- rm [file]: Remove the specified file.
+- rm -r [directory]: Remove the specified directory and all its contents.
+- chmod [permissions] [file]: Change the permissions of the specified file or directory.  
+
+**Text Manipulation**
+- cat [file]: Display the contents of a file.
+- grep [pattern] [file]: Search for lines in a file that match the specified pattern.
+- sed [options] [file]: Stream editor that can be used to perform complex text transformations on a file.
+- awk [options] [file]: A powerful tool for processing and manipulating text data in files.  
+  
+**Process Control**
+- ps: Display the list of currently running processes.
+- top: Display the processes currently running on the system sorted by resource usage.
+- kill [process id]: Terminate the process with the specified process ID.
+- killall [process name]: Terminate all processes with the specified name.
+
+**System Information**
+- uname: Display information about the current operating system.
+- df: Display information about disk space usage on the system.
+- free: Display information about available memory on the system.
+
+**Miscellaneous**
+- history: Display a list of the commands that have been executed in the current session.
+- sudo [command]: Run a command with superuser privileges.
+- man [command]: Display the manual page for a command.  
+  
+This is just a small sample of the many Bash commands that are available. For more information and a complete list of commands, you can consult the Bash manual or run the help command in the terminal.
 
 
-**Here are some Bash challenges to get you started :**
+
+
+# Here are some Bash challenges to get you started :
 
 
 1. Write a Bash script that takes a file name as an argument and counts the number of lines in the file.
@@ -174,3 +213,5 @@ cp "$file" "$file.bak"
 sed -i "s/$old_string/$new_string/g" "$file"
 echo "Replaced $old_string with $new_string in $file"
 ```
+
+
