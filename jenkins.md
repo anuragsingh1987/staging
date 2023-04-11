@@ -128,10 +128,10 @@ pipeline {
 
 This pipeline consists of three stages:
 
-* Build: Clone the source code from a Git repository, install dependencies, and build the application using npm.
+* **Build**: Clone the source code from a Git repository, install dependencies, and build the application using npm.
 
-* Test: Run automated tests using npm.
+* **Test**: Run automated tests using npm.
 
-* Deploy: Set environment variables, deploy the application to a remote server using SSH, and restart the application using PM2.
+* **Deploy**: Set environment variables, deploy the application to a remote server using SSH, and restart the application using PM2.
 
 Note that this is just a simple example and the actual pipeline script may vary depending on the application and deployment environment.
