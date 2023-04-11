@@ -85,6 +85,8 @@ Jenkins pipelines offer several benefits, such as improved automation, version c
 
 Refer this link to explore more  https://www.jenkins.io/pipeline/getting-started-pipelines/ 
 
+<img title="a title" alt="Alt text" src="/jenkins-resources/jenkins-workflow.png">
+
 
 Here's a sample Jenkins pipeline script that demonstrates how to build, test, and deploy a Node.js application:
 
