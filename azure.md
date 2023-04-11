@@ -26,7 +26,7 @@ Wait for the installation process to complete.
 
 After the installation is complete, you can verify that the Azure CLI is installed by running the following command in Terminal:
 
-```
+```bash
 az --version
 ```
 
