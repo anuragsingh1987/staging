@@ -142,6 +142,8 @@ This pipeline consists of three stages:
 
 Note that this is just a simple example and the actual pipeline script may vary depending on the application and deployment environment.
 
+*** 
+
 
 Here's a sample Jenkins pipeline script that demonstrates how to build, test, and deploy a  **Python application** :
 
