@@ -1,11 +1,9 @@
 # Jenkins on PlayPen 
----
 
 ## What is Jenkins 
----
+
 
 Jenkins is an open-source automation server that is used to automate various aspects of software development, including building, testing, and deploying software. It was originally developed as a fork of the Hudson project, and is now maintained by the Jenkins community. Jenkins allows developers to set up continuous integration and continuous delivery (CI/CD) pipelines, which automate the process of building, testing, and deploying software. This helps to improve the speed and quality of software development, as well as reducing the potential for human error. Jenkins is written in Java and can be installed on a variety of platforms, including Windows, macOS, and Linux.
----
 
 ## What is CI/CD - Continuous Integration and Continuous Delivery (or Continuous Deployment)
 
