@@ -12,13 +12,13 @@ Install Homebrew if you don't already have it by running the following command:b
 
 Once Homebrew is installed, run the following command to add the Azure CLI repository to Homebrew:
 
-```
+```bash
 brew tap azure/azure-cli 
 ```
 
 Finally, run the following command to install the Azure CLI:
 
-```
+```bash
 brew install azure-cli
 ```
 
