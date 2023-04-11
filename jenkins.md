@@ -90,7 +90,7 @@ Refer this link to explore more  https://www.jenkins.io/pipeline/getting-started
 <img title="a title" alt="Alt text" src="/jenkins-resources/jenkins-workflow.png">
 
 
-Here's a sample Jenkins pipeline script that demonstrates how to build, test, and deploy a Node.js application:
+Here's a sample Jenkins pipeline script that demonstrates how to build, test, and deploy a **Node.js application** :
 
 ```typescript
 pipeline {
@@ -139,6 +139,70 @@ This pipeline consists of three stages:
 * **Test**: Run automated tests using npm.
 
 * **Deploy**: Set environment variables, deploy the application to a remote server using SSH, and restart the application using PM2.
+
+Note that this is just a simple example and the actual pipeline script may vary depending on the application and deployment environment.
+
+
+Here's a sample Jenkins pipeline script that demonstrates how to build, test, and deploy a  **Python application** :
+
+```typescript
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                // Clone the source code from the Git repository
+                git 'https://github.com/myusername/myapp.git'
+                
+                // Create a virtual environment
+                sh 'python -m venv env'
+                
+                // Activate the virtual environment
+                sh 'source env/bin/activate'
+                
+                // Install the required dependencies using pip
+                sh 'pip install -r requirements.txt'
+                
+                // Deactivate the virtual environment
+                sh 'deactivate'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Activate the virtual environment
+                sh 'source env/bin/activate'
+                
+                // Run automated tests using pytest
+                sh 'pytest'
+                
+                // Deactivate the virtual environment
+                sh 'deactivate'
+            }
+        }
+        stage('Deploy') {
+            environment {
+                // Set the environment variables for the deployment process
+                APP_NAME = 'myapp'
+                SERVER_URL = 'https://myapp.com'
+            }
+            steps {
+                // Deploy the application to a remote server using SSH
+                sshagent(['my-ssh-credentials']) {
+                    sh 'ssh user@server.com "cd /var/www/myapp && git pull && source env/bin/activate && pip install -r requirements.txt && deactivate && systemctl restart myapp"'
+                }
+            }
+        }
+    }
+}
+```
+
+This pipeline consists of three stages:
+
+* **Build:** Clone the source code from a Git repository, create a virtual environment, activate it, install dependencies using pip, and deactivate the virtual environment.
+
+* **Test:** Activate the virtual environment, run automated tests using pytest, and deactivate the virtual environment.
+
+* **Deploy:** Set environment variables, deploy the application to a remote server using SSH, activate the virtual environment, install dependencies using pip, deactivate the virtual environment, and restart the application using systemctl.
 
 Note that this is just a simple example and the actual pipeline script may vary depending on the application and deployment environment.
 
