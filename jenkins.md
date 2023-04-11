@@ -1,6 +1,6 @@
-<img title="a title" alt="Alt text" src="/jenkins-resources/logo-jenkins.jpg">
 
-# Jenkins on PlayPen 
+
+# Jenkins on PlayPen    <img title="a title" alt="Alt text" src="/jenkins-resources/logo-jenkins.jpg">
 
 ## What is Jenkins 
 
@@ -22,7 +22,7 @@ This helps to improve the speed and quality of software development, as well as 
 CI/CD enables development teams to deliver software changes to production faster, more reliably, and with higher quality. It also promotes collaboration and communication among team members, as well as providing transparency and visibility into the development process.
 
 
-## Jekins Workflow 
+## Jenkins Workflow 
 
 Jenkins provides a flexible workflow system that allows developers to define and automate complex software delivery pipelines. Here is a high-level overview of the basic workflow steps in Jenkins:
 
