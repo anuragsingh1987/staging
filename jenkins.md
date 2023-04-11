@@ -1,3 +1,5 @@
+<img title="a title" alt="Alt text" src="/jenkins-resources/logo-jenkins.jpg">
+
 # Jenkins on PlayPen 
 
 ## What is Jenkins 
@@ -139,3 +141,21 @@ This pipeline consists of three stages:
 * **Deploy**: Set environment variables, deploy the application to a remote server using SSH, and restart the application using PM2.
 
 Note that this is just a simple example and the actual pipeline script may vary depending on the application and deployment environment.
+
+
+
+## Here are some useful links for learning more about Jenkins:
+
+* Jenkins official website: https://www.jenkins.io/
+* Jenkins documentation: https://www.jenkins.io/doc/
+* Jenkins User Documentation: https://www.jenkins.io/doc/user/
+* Jenkins Pipeline Documentation: https://www.jenkins.io/doc/book/pipeline/
+* Jenkins Plugins: https://plugins.jenkins.io/
+* Jenkins Tutorials: https://www.tutorialspoint.com/jenkins/
+* Jenkins on Docker: https://www.jenkins.io/doc/book/installing/docker/
+* Jenkins on Kubernetes: https://www.jenkins.io/doc/book/installing/kubernetes/
+* Jenkins on AWS: https://aws.amazon.com/marketplace/pp/prodview-5l5fqcvoflhlm
+* Jenkins on Azure: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/jenkins.jenkins
+* Jenkins on GCP: https://cloud.google.com/solutions/jenkins-on-kubernetes-engine
+* Jenkins on GitHub: https://github.com/jenkinsci/jenkins
+* Jenkins on Stack Overflow: https://stackoverflow.com/questions/tagged/jenkins
