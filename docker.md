@@ -2,6 +2,11 @@
 
 # Docker on PlayPen
 
+***Please Note : Though this repository has been created considering users of all levels (beginners, intermediate and experts) , but it is recommended that before using the repo , you should complete a docker course offered by pluralsight which is available to all LGB employees. The course will provide all the required and idepth knowledge about docker and should be supplemented by hands On labs supplied as part of this repo.
+
+Here is the course link and description -- > ***  <<Link to be added>>
+
+
 ## What are Containers
 
 **Containers** are a way of packaging software in a way that allows it to run consistently across different environments, such as a developer's laptop, a testing environment, or a production server. Containers allow you to isolate an application and its dependencies into a self-contained unit that can be easily deployed, managed, and scaled.
@@ -264,6 +269,7 @@ CMD ["npm", "start"]
 
 In this modified ```Dockerfile```, we first use the ```node:14``` base image to build the application, and then copy only the necessary files into the final image using the ```--from``` flag. This results in a smaller and more efficient image. To build and run the container, use the same commands as before.
 
+---
 
 
 **Now here is another challenge for you to try**
