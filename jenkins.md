@@ -1,6 +1,6 @@
+<p style="text-align:center;"><img title="a title" alt="Alt text" src="/jenkins-resources/logo-jenkins-small.jpg"></p?>
 
-
-# Jenkins on PlayPen                         <img title="a title" alt="Alt text" src="/jenkins-resources/logo-jenkins-small.jpg">
+# Jenkins on PlayPen                         
 
 ## What is Jenkins 
 
