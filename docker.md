@@ -4,7 +4,7 @@
 
 ## What are Containers
 
-Containers are a way of packaging software in a way that allows it to run consistently across different environments, such as a developer's laptop, a testing environment, or a production server. Containers allow you to isolate an application and its dependencies into a self-contained unit that can be easily deployed, managed, and scaled.
+**Containers** are a way of packaging software in a way that allows it to run consistently across different environments, such as a developer's laptop, a testing environment, or a production server. Containers allow you to isolate an application and its dependencies into a self-contained unit that can be easily deployed, managed, and scaled.
 
 Containers are built on top of operating system-level virtualization, which allows multiple containers to share a single operating system kernel, while still providing a high degree of isolation between containers. This makes containers much more lightweight than virtual machines, which require a separate operating system to be installed for each virtual machine.
 
@@ -34,19 +34,19 @@ Overall, containers are a more lightweight, efficient, and portable way of packa
 
 The architecture of Docker consists of several components that work together to enable containerization:
 
-**Docker daemon:** The Docker daemon is the core component of the Docker architecture. It is responsible for managing the Docker objects such as images, containers, networks, and volumes. The daemon runs on the host machine and interacts with the Docker CLI and other components to perform container-related operations.
+- **Docker daemon:** The Docker daemon is the core component of the Docker architecture. It is responsible for managing the Docker objects such as images, containers, networks, and volumes. The daemon runs on the host machine and interacts with the Docker CLI and other components to perform container-related operations.
 
-**Docker client:** The Docker client is a command-line tool that allows users to interact with the Docker daemon. Users can use the Docker client to build, manage, and deploy Docker containers on their host machine.
+- **Docker client:** The Docker client is a command-line tool that allows users to interact with the Docker daemon. Users can use the Docker client to build, manage, and deploy Docker containers on their host machine.
 
-**Docker registries:** Docker registries are used to store Docker images. A Docker image is a lightweight, standalone, executable package that includes everything needed to run an application, including the code, libraries, and dependencies. Docker registries can be public, such as Docker Hub, or private, such as a registry hosted within an organization.
+- **Docker registries:** Docker registries are used to store Docker images. A Docker image is a lightweight, standalone, executable package that includes everything needed to run an application, including the code, libraries, and dependencies. Docker registries can be public, such as Docker Hub, or private, such as a registry hosted within an organization.
 
-**Docker images:** Docker images are templates for creating Docker containers. They contain all the necessary files and dependencies needed to run an application, along with the operating system and other system-level components.
+- **Docker images:** Docker images are templates for creating Docker containers. They contain all the necessary files and dependencies needed to run an application, along with the operating system and other system-level components.
 
-**Docker containers:** Docker containers are instances of Docker images. They are lightweight and can be easily created and destroyed as needed. Containers are isolated from each other and from the host machine, which provides a high level of security and flexibility.
+- **Docker containers:** Docker containers are instances of Docker images. They are lightweight and can be easily created and destroyed as needed. Containers are isolated from each other and from the host machine, which provides a high level of security and flexibility.
 
-**Docker networks:** Docker networks are used to connect containers to each other and to the outside world. They allow containers to communicate with each other and with other services on the same network.
+- **Docker networks:** Docker networks are used to connect containers to each other and to the outside world. They allow containers to communicate with each other and with other services on the same network.
 
-**Docker volumes:** Docker volumes are used to store data that needs to persist between container restarts. They allow data to be shared between containers and can be backed up or replicated as needed.
+- **Docker volumes:** Docker volumes are used to store data that needs to persist between container restarts. They allow data to be shared between containers and can be backed up or replicated as needed.
 
 Overall, the Docker architecture provides a powerful and flexible platform for containerization, enabling developers to easily create and manage containerized applications with a high level of security and flexibility.
 
@@ -144,27 +144,138 @@ That's it! This is just a simple example of how to use Docker, but it demonstrat
 
 **Commonly Used Docker Commands**
 
-`docker run`: This command is used to run a container from a Docker image.
+- `docker run`: This command is used to run a container from a Docker image.
 
-`docker ps`: This command lists all the running containers.
+- `docker ps`: This command lists all the running containers.
 
-`docker images`: This command lists all the Docker images that are currently stored on the system.
+- `docker images`: This command lists all the Docker images that are currently stored on the system.
 
-`docker pull`: This command is used to download a Docker image from a registry.
+- `docker pull`: This command is used to download a Docker image from a registry.
 
-`docker build`: This command is used to build a Docker image from a Dockerfile.
+- `docker build`: This command is used to build a Docker image from a Dockerfile.
 
-`docker stop`: This command is used to stop a running container.
+- `docker stop`: This command is used to stop a running container.
 
-`docker rm`: This command is used to remove a container.
+- `docker rm`: This command is used to remove a container.
 
-`docker rmi`: This command is used to remove a Docker image.
+- `docker rmi`: This command is used to remove a Docker image.
 
-`docker exec`: This command is used to run a command inside a running container.
+- `docker exec`: This command is used to run a command inside a running container.
 
-`docker logs`: This command is used to view the logs of a container.
+- `docker logs`: This command is used to view the logs of a container.
 
 These are just a few of the most commonly used Docker commands. There are many other Docker commands available, depending on your use case. You can view the complete list of commands by running `docker --help`.
+
+
+
+## A Simple Docker Challenge 
+
+**Challenge:**
+Create a Docker container that runs a simple Node.js web application that displays the current date and time in the browser when accessed. The web application should run on port 8080.
+
+The Docker container should be built using the official Node.js 14 base image and should install the Express framework using npm.
+
+Once the container is built, you should be able to run it with the command "docker run -p 8080:8080 &lt;image-name&gt;" and access the web application by opening a browser and navigating to http://localhost:8080.
+
+**Solution:**
+
+To complete this challenge, follow the steps below:
+
+1. Create a new directory for the project and navigate to it:
+
+```bash
+mkdir nodejs-webapp && cd nodejs-webapp
+```
+
+2. Create a new file named ```app.js``` and add the following code to it:
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) =&gt; {
+  const now = new Date();
+  res.send(`The current time is: ${now.toLocaleString()}`);
+});
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () =&gt; {
+  console.log(`Server running on port ${PORT}`);
+});
+```
+
+3. Create a new file named ```Dockerfile``` and add the following code to it:
+
+```Dockerfile
+FROM node:14
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+EXPOSE 8080
+
+CMD ["npm", "start"]
+
+```
+
+4. Build the Docker image:
+
+```docker build -t nodejs-webapp .```
+
+5. Run the Docker container:arduino
+
+```arduino
+docker run -p 8080:8080 nodejs-webapp
+```
+
+6. Access the web application by opening a browser and navigating to http://localhost:8080.
+
+That's it! You should see the current date and time displayed in the browser. If you want to stop the container, press ```Ctrl+C``` in the terminal.
+
+
+**Bonus challenge solution:**
+
+To create a multi-stage build, modify the ```Dockerfile``` as follows:
+
+```Dockerfile
+FROM node:14 AS build
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+FROM node:14-alpine
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm install --production
+COPY --from=build /app/dist /app/dist
+
+EXPOSE 8080
+
+CMD ["npm", "start"]
+```
+
+In this modified ```Dockerfile```, we first use the ```node:14``` base image to build the application, and then copy only the necessary files into the final image using the ```--from``` flag. This results in a smaller and more efficient image. To build and run the container, use the same commands as before.
+
+
+
+**Now here is another challenge for you to try **
+
+Create a Docker container that runs a simple Python web application that prints "Hello, World!" to the browser when accessed. The web application should run on port 8080.
+
+The Docker container should be built using the official Python 3.9 base image and should install the Flask framework using pip.
+
+Once the container is built, you should be able to run it with the command "docker run -p 8080:8080 <image-name>" and access the web application by opening a browser and navigating to http://localhost:8080.
+
+To make it more challenging, add a feature to the web application that allows the user to input their name and have the application print "Hello, <name>!" to the browser. Make sure the input is properly validated and sanitized to prevent any security vulnerabilities.
+
+Bonus challenge: Modify the Dockerfile to create a multi-stage build that first installs the necessary dependencies and then copies only the required files into the final image, making the image smaller and more efficient.
+
 
 ---
 
