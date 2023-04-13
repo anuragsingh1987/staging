@@ -340,3 +340,24 @@ Firewall: Make sure "Allow HTTP traffic" and "Allow HTTPS traffic" are checked i
 7. That's it! You now have an Ubuntu VM running on Google Cloud Platform. You can connect to it using SSH, and you can also configure it further by installing additional software and configuring firewall rules.
 
 
+## Useful Links and References
+
+Here are some links to useful **Linux references:**
+
+1.  Linux Documentation Project: [https://tldp.org/](https://tldp.org/)
+2.  Linux man pages: [https://linux.die.net/man/](https://linux.die.net/man/)
+3.  Linux Journal: [https://www.linuxjournal.com/](https://www.linuxjournal.com/)
+4.  Linux Mint User Guide: [https://www.linuxmint.com/documentation.php](https://www.linuxmint.com/documentation.php)
+5.  Ubuntu Documentation: [https://help.ubuntu.com/](https://help.ubuntu.com/)
+
+These resources provide a wealth of information on various Linux-related topics, including installation, system administration, networking, programming, and more.
+
+Here are some links to useful **Bash scripting references:**
+
+1.  Bash Guide for Beginners: [http://tldp.org/LDP/Bash-Beginners-Guide/html/](http://tldp.org/LDP/Bash-Beginners-Guide/html/)
+2.  Bash Reference Manual: [https://www.gnu.org/software/bash/manual/bash.html](https://www.gnu.org/software/bash/manual/bash.html)
+3.  Advanced Bash-Scripting Guide: [http://tldp.org/LDP/abs/html/](http://tldp.org/LDP/abs/html/)
+4.  Bash Scripting Tutorial for Beginners: [https://linuxconfig.org/bash-scripting-tutorial-for-beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
+5.  ShellCheck: [https://www.shellcheck.net/](https://www.shellcheck.net/)
+
+These resources provide a wealth of information on various Bash scripting-related topics, including syntax, variables, control flow, functions, and more. Additionally, ShellCheck is a tool that can help you identify and fix common errors in your Bash scripts.
