@@ -436,3 +436,79 @@ Remember that learning Groovy (or any programming language) takes time and pract
 * Jenkins on GCP: https://cloud.google.com/solutions/jenkins-on-kubernetes-engine
 * Jenkins on GitHub: https://github.com/jenkinsci/jenkins
 * Jenkins on Stack Overflow: https://stackoverflow.com/questions/tagged/jenkins
+
+
+
+
+
+## Jenkins Installation
+
+Follow this link https://www.jenkins.io/doc/book/installing/ for Installing Jenkins or you can follow the instructions mentioned below for your dev mac or a PlayPen
+
+### Installing Jenkins on your GCP PlayPen
+
+Here are the steps to install Jenkins on a Google Cloud Platform (GCP) virtual machine (VM):
+
+ 1. **Launch a GCP VM:** If you are not sure how to do this , follow the tutorial here 
+
+2. **Install Java:** Jenkins requires Java to run, so you'll need to install it on your VM. You can do this by running the following command:
+
+```
+Copy code
+sudo apt-get install default-jre
+```
+
+3. **Add the Jenkins repository:** Jenkins isn't available in the default Ubuntu repositories, so you'll need to add the official Jenkins repository to your system. Run the following commands to add the repository and import its key:
+
+```rust
+Copy code
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+```
+
+4. **Install Jenkins:** Now that you've added the Jenkins repository, you can install Jenkins using the following command:
+
+```
+Copy code
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
+5. **Start Jenkins:** Jenkins should start automatically after installation, but if it doesn't, you can start it manually using the following command:
+
+```
+Copy code
+sudo systemctl start jenkins
+```
+
+6. **Access Jenkins:** Once Jenkins is running, you can access it in your web browser by navigating to http://<your_vm_ip>:8080. You should see the Jenkins login page, where you can log in and start using Jenkins.
+
+That's it! You now have Jenkins installed and running on your GCP VM.
+
+### Installing Jenkins on your Dev Mac
+
+The easiest way to do this is via Docker 
+
+1. **Install Docker:** If you don't already have Docker installed on your system, you'll need to install it first. You can follow the official Docker documentation for your specific operating system to install it.
+
+2. **Pull the Jenkins image:** Jenkins provides an official Docker image that you can use to run Jenkins in a container. You can pull the latest Jenkins image using the following command:
+
+```bash
+Copy code
+docker pull jenkins/jenkins
+```
+
+3. **Run the Jenkins container:** Now that you have the Jenkins image, you can run the container using the following command:
+
+```
+Copy code
+docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins
+```
+
+This command runs the Jenkins container and maps port 8080 on your host machine to port 8080 in the container, which is where the Jenkins web interface is hosted. It also maps port 50000, which is used for Jenkins agents to communicate with the Jenkins master.
+
+4. **Access Jenkins:** Once the Jenkins container is running, you can access it in your web browser by navigating to http://localhost:8080. You should see the Jenkins login page, where you can log in and start using Jenkins.
+
+That's it! You now have Jenkins running in a container on your local machine.
+
+

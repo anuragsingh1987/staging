@@ -6,6 +6,13 @@
 
 **Here is the course link and description -- >   <<Link to be added>>**
 
+## What is Shell ? 
+
+A shell is a command-line interface (CLI) program that provides a user interface for accessing an operating system's services and running commands. The shell is typically the first layer of interaction between a user and the operating system, and it provides a way for users to communicate with the system by typing commands and viewing the output.
+
+The shell provides a prompt that allows users to enter commands and arguments. The shell then interprets these commands and runs them by calling the appropriate system functions and programs. The shell also provides various features such as command history, tab completion, and scripting capabilities, which make it a powerful tool for managing and automating system tasks.
+
+There are several different shells available for Unix and Unix-like operating systems, such as Bash, Korn shell (ksh), C shell (csh), and Z shell (zsh), each with its own set of features and capabilities. Bash is the most widely used shell and is the default shell for many Linux distributions.
 
 ## What is Bash ? 
 
@@ -39,7 +46,7 @@ These are just some of the basic features of Bash. As you become more familiar w
 
 Bash is a specific type of shell, and shell scripting refers to the practice of writing scripts that run on a shell. So in a sense, **Bash is a subset of shell scripting.**
 
-The term "shell" refers to a command-line interface that allows users to interact with an operating system by running commands. A shell can interpret and execute scripts written in a specific language, such as Bash, zsh, or csh. These scripts can be used to automate tasks, configure the operating system, or perform system maintenance.
+Again , the term "shell" refers to a command-line interface that allows users to interact with an operating system by running commands. A shell can interpret and execute scripts written in a specific language, such as Bash, zsh, or csh. These scripts can be used to automate tasks, configure the operating system, or perform system maintenance.
 
 Bash is a popular shell that is widely used in Unix-based operating systems such as Linux and macOS. It is a powerful and versatile shell that supports many advanced features, such as variables, conditionals, loops, functions, and pipelines. Bash scripts can be used for a wide range of tasks, from simple file operations to complex system administration tasks.
 
@@ -57,6 +64,9 @@ In summary, Bash is a specific type of shell that is widely used in Unix-based o
 - **Set the file as executable:** Before you can run the script, you need to set it as executable. You can do this by running the command "chmod +x script.sh" in your terminal, where "script.sh" is the name of your script.
 
 - **Run the script:** To run the script, simply type its name in the terminal and press Enter. For example, if your script is named "script.sh", you would run it by typing "./script.sh". The "./" tells the terminal to look in the current directory for the script.
+
+
+
 
 Here is an example of a simple Bash script that prints "Hello, World!" to the screen:
 
@@ -104,8 +114,6 @@ Save this script as "hello.sh" and set it as executable using the command "chmod
 - man [command]: Display the manual page for a command.  
   
 This is just a small sample of the many Bash commands that are available. For more information and a complete list of commands, you can consult the Bash manual or run the help command in the terminal.
-
-
 
 
 # Here are some Bash challenges to get you started :
@@ -213,5 +221,4 @@ cp "$file" "$file.bak"
 sed -i "s/$old_string/$new_string/g" "$file"
 echo "Replaced $old_string with $new_string in $file"
 ```
-
 

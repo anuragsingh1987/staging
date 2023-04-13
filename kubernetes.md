@@ -34,8 +34,6 @@ In summary, Kubernetes is a more powerful and flexible platform, with a more com
 
 ## Kubernetes architecture
 
-<p style="text-align:center;"><img title="a title" alt="Alt text" src="/kubernetes-resources/components-of-kubernetes.svg"></p?>
-
 **Kubernetes architecture** is composed of several components that work together to provide a platform for deploying and managing containerized applications. The main components of the Kubernetes architecture are:
 
 **Control plane:** The control plane is responsible for managing the overall state of the cluster. It includes several components that work together to schedule and manage containers, and to provide services to the cluster.
@@ -56,3 +54,75 @@ In summary, Kubernetes is a more powerful and flexible platform, with a more com
 -   **Network plugin:** The network plugin provides networking capabilities to the cluster, such as virtual networks and IP address management.
 
 Overall, the Kubernetes architecture provides a highly scalable and fault-tolerant platform for deploying and managing containerized applications.
+
+## Kubernetes on GCP PlayPen
+
+Google Cloud Platform (GCP) offers a fully-managed Kubernetes service called Google Kubernetes Engine (GKE). GKE provides a managed environment for deploying and running containerized applications on Kubernetes, allowing developers to focus on building and scaling their applications rather than managing the underlying infrastructure.
+
+Here are high level steps to help you understand the process to deploy a Kubernetes cluster on GCP using GKE:
+
+ 1. Create a GCP project and enable the Kubernetes Engine API. 
+ 2. Install the Google Cloud SDK and authenticate with your GCP account. 
+ 3. Use the gcloud command-line tool to create a GKE cluster, specifying the       number of nodes, machine type, and other options.
+ 4. Deploy your containerized applications to the GKE cluster using Kubernetes       manifests or Helm charts.
+ 5. Monitor and manage your cluster using the Kubernetes Dashboard, the gcloud command-line tool, or third-party tools.
+
+GKE provides many benefits over self-hosted Kubernetes clusters, including automatic scaling, automatic upgrades, automatic repair, and integrated logging and monitoring. GKE also integrates with other GCP services, such as Cloud Load Balancing, Cloud Storage, and Cloud SQL, to provide a fully-managed cloud platform for running containerized applications.
+
+## Deploy an application on GCP Playpen with Kubernetes
+
+Here's a step-by-step guide to getting started with Kubernetes on GCP using the gcloud command-line tool:
+
+ 1. Set up a GCP account / Launch a GCP PlayPen
+ 2.  Install the gcloud SDK: The gcloud SDK is the command-line interface for GCP. You can download and install it from the GCP website.
+
+Configure the gcloud SDK: Once you have the gcloud SDK installed, you'll need to configure it to use your GCP account and project. To do this, follow these steps:
+
+a. Open a terminal and run the command gcloud auth login. This will prompt you to log in to your GCP account and authorize the gcloud SDK to access your account.
+
+b. After you've logged in, run the command gcloud config set project [PROJECT_ID], replacing [PROJECT_ID] with the ID of your GCP project.
+
+Create a GKE cluster: To create a GKE cluster using gcloud, follow these steps:
+
+a. Run the command gcloud container clusters create [CLUSTER_NAME], replacing [CLUSTER_NAME] with the name you want to give your cluster.
+
+b. You can customize the cluster options by adding flags to the gcloud container clusters create command. For example, you can specify the number of nodes with the --num-nodes flag.
+
+Connect to the cluster: Once your cluster is created, you can connect to it using kubectl, the Kubernetes command-line tool. To connect to the cluster, follow these steps:
+
+a. Run the command gcloud container clusters get-credentials [CLUSTER_NAME], replacing [CLUSTER_NAME] with the name of your cluster.
+
+b. This command will download the necessary credentials and configuration files for kubectl to access your cluster.
+
+Deploy an application: Now that you're connected to the cluster, you can deploy an application to it. To deploy an application, follow these steps:
+
+a. Create a Kubernetes deployment YAML file for your application. This file should define the containers, volumes, and other resources required by your application.
+
+b. Apply the deployment YAML file using kubectl apply. This will create a deployment for your application in the cluster.
+
+c. Expose the deployment as a Kubernetes service using kubectl expose. This will create a load balancer service for your deployment, allowing you to access your application from the internet.
+
+Scale your deployment: Once your application is deployed, you can scale it up or down using Kubernetes. To scale your deployment, follow these steps:
+
+a. Use kubectl get deployments to list your deployments and their current status.
+
+b. Use kubectl scale deployment to scale your deployment up or down. For example, kubectl scale deployment my-app --replicas=3 will scale the "my-app" deployment to three replicas.
+
+That's it! You now have a Kubernetes cluster running on GCP, with an application deployed and scaled using Kubernetes and gcloud. From here, you can explore other Kubernetes features and tools, such as Helm charts, Prometheus monitoring, and Istio service mesh.
+
+## Kubernetes on Azure PlayPen
+
+Microsoft Azure provides a managed Kubernetes service called Azure Kubernetes Service (AKS), which simplifies the deployment and management of Kubernetes clusters on Azure. AKS provides an enterprise-grade platform for running containerized applications and integrates with other Azure services to provide a complete cloud platform for deploying and managing modern applications.
+
+Here are some high level steps to deploy a Kubernetes cluster on Azure using AKS:
+
+1.  Create an Azure account and create a new resource group to hold the AKS cluster.
+2.  Install the Azure CLI and authenticate with your Azure account.
+3.  Use the Azure CLI to create an AKS cluster, specifying the number of nodes, machine type, and other options.
+4.  Deploy your containerized applications to the AKS cluster using Kubernetes manifests or Helm charts.
+5.  Monitor and manage your cluster using the Kubernetes Dashboard, the Azure CLI, or third-party tools.
+
+AKS provides many benefits over self-hosted Kubernetes clusters, including automatic scaling, automatic upgrades, automatic repair, and integrated logging and monitoring. AKS also integrates with other Azure services, such as Azure Load Balancer, Azure Container Registry, and Azure Monitor, to provide a fully-managed cloud platform for running containerized applications.
+
+Additionally, Azure provides several tools and services for managing Kubernetes clusters, such as Azure Dev Spaces for rapid application development, Azure Arc for managing Kubernetes clusters across multiple environments, and Azure Kubernetes Service Mesh for managing microservices-based applications.
+
