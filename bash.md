@@ -1,10 +1,77 @@
-<p style="text-align:center;"><img title="a title" alt="Alt text" src="/bash-resources/bash-logo-small.png"></p?>
+<p style="text-align:center;"><img title="a title" alt="Alt text" src="/bash-resources/bash-logo-small.png"><img title="a title" alt="Alt text" src="/bash-resources/linux.png"></p?>
 
-# Bash & Shell Scripting
+# Linux , Bash & Shell Scripting
 
 *Please Note : Though this repository has been created considering users of all levels (beginners, intermediate and experts) , but it is recommended that before using the repo , you should complete a docker course offered by pluralsight which is available to all LGB employees. The course will provide all the required and idepth knowledge about docker and should be supplemented by hands On labs supplied as part of this repo.*
 
 **Here is the course link and description -- >   <<Link to be added>>**
+
+## What is Linux
+
+Linux is a free and open-source operating system (OS) based on the Unix operating system. It was first created by Linus Torvalds in 1991 and has since become one of the most widely used operating systems in the world.
+
+Linux is known for its flexibility, stability, and security, and is used in a wide range of applications, from servers and supercomputers to smartphones and embedded systems. Linux is also popular among developers and programmers, who use it as a platform for software development and testing.
+
+One of the key features of Linux is that it is distributed under a free and open-source license, which means that anyone can use, modify, and distribute the source code of the operating system. This has led to a large and vibrant community of developers who contribute to the development of Linux and create various distributions, or versions, of the operating system.
+
+## Linux Folder Structure
+
+<img title="a title" alt="Alt text" src="/bash-resources/file.png">
+
+Linux is organized in a hierarchical file system structure, similar to other Unix-like operating systems. The root directory is the top-level directory in the hierarchy, represented by a forward slash (/), and all other files and directories are organized beneath it. Here is a brief overview of the main directories in the Linux file system:
+
+- **/bin:** Contains binary files (programs) that are essential to the system's operation. These are often used by the system administrator or system scripts.
+
+- **/boot:** Contains the files needed to boot the system, including the Linux kernel, boot loader, and configuration files.
+
+- **/dev:** Contains device files, which are special files that represent devices like hard drives, printers, and USB devices.
+
+- **/etc:** Contains system configuration files, including network settings, system startup scripts, user account information, and more.
+
+- **/home:** Contains the home directories for individual users on the system.
+
+- **/lib and /lib64:** Contains library files, which are collections of precompiled code used by applications and the operating system.
+
+- **/mnt:** Contains directories for mounting external storage devices, such as USB drives or network shares.
+
+- **/opt:** Contains optional software packages that are installed on the system.
+
+- **/proc:** Contains system information and process data, presented as files that can be read by programs.
+
+- **/root:** The home directory for the root user, which is the system administrator.
+
+- **/sbin:** Contains system binaries (programs) that are essential to the system's operation. These are often used by the system administrator or system scripts.
+
+- **/tmp:** Contains temporary files that are created by various programs.
+
+- **/usr:** Contains user programs and supporting files, including libraries, documentation, and shared resources.
+
+- **/var:** Contains variable data files, such as log files, system mail, and printer spools.
+
+This file system structure is important for managing and organizing the files and directories on a Linux system, and it provides a standardized way of accessing and manipulating the files and directories in the system.
+
+
+
+## Linux Distros
+Some of the most popular Linux distros include:
+
+1.  **Ubuntu:** One of the most popular and user-friendly Linux distros, Ubuntu is designed for desktop and laptop computers and is based on the Debian architecture.
+    
+2.  **Debian:** A stable and reliable Linux distro that is popular among servers and other mission-critical systems.
+    
+3.  **Fedora:** A community-driven distro that is sponsored by Red Hat and is designed for developers, system administrators, and other advanced users.
+    
+4.  **CentOS:** A stable and secure distro that is based on the Red Hat Enterprise Linux codebase and is popular among servers and other enterprise-level systems.
+    
+5.  **Arch Linux:** A lightweight and customizable distro that is designed for experienced Linux users who want a high degree of control over their system.
+    
+6.  **openSUSE:** A versatile and easy-to-use distro that is popular among desktop users, developers, and system administrators.
+    
+7.  **Mint:** A user-friendly and beginner-friendly distro that is based on Ubuntu and is designed for desktop and laptop computers.
+    
+
+These are just a few examples of the many different Linux distros available. Each distro has its own strengths and weaknesses, and the best one for you will depend on your specific needs and preferences.
+
 
 ## What is Shell ? 
 
@@ -221,4 +288,55 @@ cp "$file" "$file.bak"
 sed -i "s/$old_string/$new_string/g" "$file"
 echo "Replaced $old_string with $new_string in $file"
 ```
+
+
+## Launch a Linux ( Ubuntu ) VM in your GCP PlayPen
+
+To launch an Ubuntu VM on Google Cloud Platform (GCP), follow these steps:
+
+**Please Note : The GCP PlayPen comes with no VPC configuration. In case you are using the GCP PlayPen for the first time , you will need to create a VPC first** Skip these if you already have a VPC configured and move straight to Launch a Linux ( Ubuntu ) VM section.
+
+To create a VPC (Virtual Private Cloud) on Google Cloud Platform (GCP), follow these steps:
+
+1. Log in to your GCP console and select your project.
+
+2. Click on the "Navigation menu" button on the top-left corner of the console, and navigate to the VPC Network section.
+
+3. Click on "VPC networks" and then click on "Create VPC network".
+
+4. In the "Create a VPC network" page, fill in the following details:
+```
+Name: A name for your VPC network.
+Subnet creation mode: Choose "Automatic" to have GCP create subnets for you, or "Custom" to create your own subnets. ( Use Automatic for simplicity )
+IP address range: The range of IP addresses to be used by your VPC network.
+Subnet name and IP range: If you chose "Custom" subnet creation mode, you'll need to fill in this section to define your subnets.
+```
+5. Once you've filled in all the necessary details, click "Create" at the bottom of the page.
+
+6. Your VPC network will take a few seconds to be created. Once it's ready, you'll see it listed in the "VPC networks" page of your console.
+
+That's it! You now have a VPC network created on Google Cloud Platform. You can now add subnets, configure firewall rules, and connect your VPC network to other networks using VPN or interconnect.
+
+**Launch a Linux ( Ubuntu ) VM.**
+
+1. Log in to your GCP console and select your project.
+
+2. Click on the "Navigation menu" button on the top-left corner of the console, and navigate to the Compute Engine section.
+
+3. Click on "VM instances" and then click on "Create instance".
+
+4. In the "Create an instance" page, fill in the following details:
+```
+Name: A name for your instance.
+Region and Zone: Choose the region and zone where you want your instance to be located.
+Machine type: Choose the machine type that best suits your needs.
+Boot disk: Under "Boot disk", click "Change", select "Ubuntu" as the operating system, and choose the version of Ubuntu you want to use.
+Firewall: Make sure "Allow HTTP traffic" and "Allow HTTPS traffic" are checked if you want to use your instance as a web server.
+```
+5. Once you've filled in all the necessary details, click "Create" at the bottom of the page.
+
+6. Your instance will take a few minutes to initialize. Once it's ready, you'll see it listed in the "VM instances" page of your console.
+
+7. That's it! You now have an Ubuntu VM running on Google Cloud Platform. You can connect to it using SSH, and you can also configure it further by installing additional software and configuring firewall rules.
+
 
