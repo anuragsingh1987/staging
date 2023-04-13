@@ -1,4 +1,4 @@
-<p style="text-align:center;"><img title="a title" alt="Alt text" src="/bash-resources/bash-logo-small.png"><img title="a title" alt="Alt text" src="/bash-resources/linux.png"></p?>
+<p style="text-align:center;"><img title="a title" alt="Alt text" src="/bash-resources/bash-logo-small.png">         <img title="a title" alt="Alt text" src="/bash-resources/linux.png"></p?>
 
 # Linux , Bash & Shell Scripting
 
