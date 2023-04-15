@@ -78,7 +78,7 @@ These are just a few of the many Terraform commands available. For a complete li
 
 ## Terraform Workflow
 
-<p style="text-align:center;"><img title="a title" alt="Alt text" src="/terraform-resources/terraform_logo.png"></p?>
+<p style="text-align:center;"><img title="a title" alt="Alt text" src="/terraform-resources/tf-workflow.png"></p?>
 
 
 Here is a basic workflow for using Terraform to provision and manage infrastructure resources:
