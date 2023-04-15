@@ -2,7 +2,7 @@
 
 ## Kubernetes on PlayPen
 
-*Please Note : Though this repository has been created considering users of all levels (beginners, intermediate and experts) , but it is recommended that before using the repo , you should complete a docker course offered by pluralsight which is available to all LGB employees. The course will provide all the required and idepth knowledge about docker and should be supplemented by hands On labs supplied as part of this repo.*
+*Please Note : Use this repository and the labs to get hand's On experience with Kubernetes. If you are completely new to Kubernetes , we would recommend you to complete some pluralsight courses on Kubernetes which are available to all LBG employees. If you don't have access to pluralsight ,refer this link << Link >> to get access*
 
 **Here is the course link and description -- > <<Link to  be  added>>**
 
@@ -34,6 +34,8 @@ In summary, Kubernetes is a more powerful and flexible platform, with a more com
 
 ## Kubernetes architecture
 
+<p style="text-align:center;"><img title="a title" alt="Alt text" src="/kubernetes-resources/components-of-kubernetes.svg"></p?>
+
 **Kubernetes architecture** is composed of several components that work together to provide a platform for deploying and managing containerized applications. The main components of the Kubernetes architecture are:
 
 **Control plane:** The control plane is responsible for managing the overall state of the cluster. It includes several components that work together to schedule and manage containers, and to provide services to the cluster.
@@ -59,6 +61,9 @@ Overall, the Kubernetes architecture provides a highly scalable and fault-tolera
 
 Google Cloud Platform (GCP) offers a fully-managed Kubernetes service called Google Kubernetes Engine (GKE). GKE provides a managed environment for deploying and running containerized applications on Kubernetes, allowing developers to focus on building and scaling their applications rather than managing the underlying infrastructure.
 
+<p style="text-align:center;"><img title="a title" alt="Alt text" src="/kubernetes-resources/gke-architecture.svg"></p?>
+
+
 Here are high level steps to help you understand the process to deploy a Kubernetes cluster on GCP using GKE:
 
  1. Create a GCP project and enable the Kubernetes Engine API. 
@@ -73,46 +78,50 @@ GKE provides many benefits over self-hosted Kubernetes clusters, including autom
 
 Here's a step-by-step guide to getting started with Kubernetes on GCP using the gcloud command-line tool:
 
- 1. Set up a GCP account / Launch a GCP PlayPen
- 2.  Install the gcloud SDK: The gcloud SDK is the command-line interface for GCP. You can download and install it from the GCP website.
+1. Set up a GCP account / Launch a GCP PlayPen
+2. Install the gcloud SDK: The gcloud SDK is the command-line interface for GCP. You can download and install it from the GCP website.
 
-Configure the gcloud SDK: Once you have the gcloud SDK installed, you'll need to configure it to use your GCP account and project. To do this, follow these steps:
+3. Configure the gcloud SDK: Once you have the gcloud SDK installed, you'll need to configure it to use your GCP account and project. To do this, follow these steps:
 
-a. Open a terminal and run the command gcloud auth login. This will prompt you to log in to your GCP account and authorize the gcloud SDK to access your account.
+    a. Open a terminal and run the command gcloud auth login. This will prompt you to log in to your GCP account and authorize the gcloud SDK to access your account.
 
-b. After you've logged in, run the command gcloud config set project [PROJECT_ID], replacing [PROJECT_ID] with the ID of your GCP project.
+    b. After you've logged in, run the command gcloud config set project [PROJECT_ID], replacing [PROJECT_ID] with the ID of your GCP project.
 
-Create a GKE cluster: To create a GKE cluster using gcloud, follow these steps:
+4. Create a GKE cluster: To create a GKE cluster using gcloud, follow these steps:
 
-a. Run the command gcloud container clusters create [CLUSTER_NAME], replacing [CLUSTER_NAME] with the name you want to give your cluster.
+    a. Run the command gcloud container clusters create [CLUSTER_NAME], replacing [CLUSTER_NAME] with the name you want to give your cluster.
 
-b. You can customize the cluster options by adding flags to the gcloud container clusters create command. For example, you can specify the number of nodes with the --num-nodes flag.
+    b. You can customize the cluster options by adding flags to the gcloud container clusters create command. For example, you can specify the number of nodes with the --num-nodes flag.
 
-Connect to the cluster: Once your cluster is created, you can connect to it using kubectl, the Kubernetes command-line tool. To connect to the cluster, follow these steps:
+5. Connect to the cluster: Once your cluster is created, you can connect to it using kubectl, the Kubernetes command-line tool
+6. To connect to the cluster, follow these steps:
 
-a. Run the command gcloud container clusters get-credentials [CLUSTER_NAME], replacing [CLUSTER_NAME] with the name of your cluster.
+    a. Run the command gcloud container clusters get-credentials [CLUSTER_NAME], replacing [CLUSTER_NAME] with the name of your cluster.
 
-b. This command will download the necessary credentials and configuration files for kubectl to access your cluster.
+    b. This command will download the necessary credentials and configuration files for kubectl to access your cluster.
 
-Deploy an application: Now that you're connected to the cluster, you can deploy an application to it. To deploy an application, follow these steps:
+7. Deploy an application: Now that you're connected to the cluster, you can deploy an application to it. To deploy an application, follow these steps:
 
-a. Create a Kubernetes deployment YAML file for your application. This file should define the containers, volumes, and other resources required by your application.
+    a. Create a Kubernetes deployment YAML file for your application. This file should define the containers, volumes, and other resources required by your application.
 
-b. Apply the deployment YAML file using kubectl apply. This will create a deployment for your application in the cluster.
+    b. Apply the deployment YAML file using kubectl apply. This will create a deployment for your application in the cluster.
 
-c. Expose the deployment as a Kubernetes service using kubectl expose. This will create a load balancer service for your deployment, allowing you to access your application from the internet.
+    c. Expose the deployment as a Kubernetes service using kubectl expose. This will create a load balancer service for your deployment, allowing you to access your application from the internet.
 
-Scale your deployment: Once your application is deployed, you can scale it up or down using Kubernetes. To scale your deployment, follow these steps:
+8. Scale your deployment: Once your application is deployed, you can scale it up or down using Kubernetes. To scale your deployment, follow these steps:
 
-a. Use kubectl get deployments to list your deployments and their current status.
+    a. Use kubectl get deployments to list your deployments and their current status.
 
-b. Use kubectl scale deployment to scale your deployment up or down. For example, kubectl scale deployment my-app --replicas=3 will scale the "my-app" deployment to three replicas.
+    b. Use kubectl scale deployment to scale your deployment up or down. For example, kubectl scale deployment my-app --replicas=3 will scale the "my-app" deployment to three replicas.
 
 That's it! You now have a Kubernetes cluster running on GCP, with an application deployed and scaled using Kubernetes and gcloud. From here, you can explore other Kubernetes features and tools, such as Helm charts, Prometheus monitoring, and Istio service mesh.
 
 ## Kubernetes on Azure PlayPen
 
 Microsoft Azure provides a managed Kubernetes service called Azure Kubernetes Service (AKS), which simplifies the deployment and management of Kubernetes clusters on Azure. AKS provides an enterprise-grade platform for running containerized applications and integrates with other Azure services to provide a complete cloud platform for deploying and managing modern applications.
+
+<p style="text-align:center;"><img title="a title" alt="Alt text" src="/kubernetes-resources/aks.svg"></p?>
+
 
 Here are some high level steps to deploy a Kubernetes cluster on Azure using AKS:
 
@@ -126,3 +135,28 @@ AKS provides many benefits over self-hosted Kubernetes clusters, including autom
 
 Additionally, Azure provides several tools and services for managing Kubernetes clusters, such as Azure Dev Spaces for rapid application development, Azure Arc for managing Kubernetes clusters across multiple environments, and Azure Kubernetes Service Mesh for managing microservices-based applications.
 
+
+
+
+## Here are some useful Kubernetes reference links:
+
+1.  Official Kubernetes documentation: [https://kubernetes.io/docs/](https://kubernetes.io/docs/)
+    
+2.  Kubernetes cheat sheet: [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+    
+3.  Kubernetes tutorials on Kubernetes Academy: [https://www.kubernetesacademy.com/tutorials](https://www.kubernetesacademy.com/tutorials)
+    
+4.  Kubernetes by example: [https://kubernetesbyexample.com/](https://kubernetesbyexample.com/)
+    
+5.  Kubernetes learning resources on GitHub: [https://github.com/kubernetes/kubernetes/blob/master/README.md#learning-resources](https://github.com/kubernetes/kubernetes/blob/master/README.md#learning-resources)
+    
+6.  Kubernetes the hard way: [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+    
+7.  Kubernetes on AWS: [https://aws.amazon.com/kubernetes/](https://aws.amazon.com/kubernetes/)
+    
+8.  Kubernetes on GCP: [https://cloud.google.com/kubernetes-engine/](https://cloud.google.com/kubernetes-engine/)
+    
+9.  Kubernetes on Azure: [https://azure.microsoft.com/en-us/services/kubernetes-service/](https://azure.microsoft.com/en-us/services/kubernetes-service/)
+    
+
+These resources provide a wealth of information about Kubernetes, from basic concepts to advanced techniques and workflows. By using these resources, you can become a more effective and efficient Kubernetes user.
