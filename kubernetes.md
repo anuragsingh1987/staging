@@ -57,6 +57,22 @@ In summary, Kubernetes is a more powerful and flexible platform, with a more com
 
 Overall, the Kubernetes architecture provides a highly scalable and fault-tolerant platform for deploying and managing containerized applications.
 
+## Helm and Helm Charts
+
+Helm is an open-source package manager for Kubernetes that allows you to define, install, and upgrade applications on Kubernetes. Helm helps you manage Kubernetes applications by providing an easy-to-use interface for packaging, deploying, and managing Kubernetes resources as a single unit, called a chart.
+
+Helm charts are packages of pre-configured Kubernetes resources, such as deployments, services, and config maps, that can be easily installed and managed using the Helm package manager. Helm charts provide a standardized and repeatable way of deploying applications and services to a Kubernetes cluster.
+
+A Helm chart typically includes the following components:
+
+Chart.yaml: A file that defines the chart's metadata, such as name, version, and description.
+values.yaml: A file that defines the default values for the chart's configurable variables.
+Templates: A directory that contains Kubernetes manifest templates, which are used to generate Kubernetes resources.
+A README.md file: A file that provides documentation for the chart.
+Helm charts can be easily customized using the values.yaml file, which allows you to override the default values for the chart's configurable variables. This makes it easy to deploy the same application with different configurations, or to deploy the same application to different environments, such as development, staging, and production.
+
+Helm also provides features such as rollbacks, versioning, and dependency management, making it easy to manage the lifecycle of your applications on Kubernetes.
+
 ## Kubernetes on GCP PlayPen
 
 Google Cloud Platform (GCP) offers a fully-managed Kubernetes service called Google Kubernetes Engine (GKE). GKE provides a managed environment for deploying and running containerized applications on Kubernetes, allowing developers to focus on building and scaling their applications rather than managing the underlying infrastructure.
