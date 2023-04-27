@@ -1,7 +1,7 @@
 ```mermaid
 graph LR
     A(Start) --> B(Is the data structured or unstructured?)
-    B --> C{Structured?}
+    B --> C("fa:fa-twitter for peace")
     C --> |Yes| D(Is it relational data?)
     D --> E{Do you need to perform complex queries?}
     E --> |Yes| F[Choose a relational database like MySQL, Oracle, or Microsoft SQL Server]
