@@ -23,11 +23,19 @@ graph LR
     Q --> Z(End)
     S --> Z(End)
     F --> Z(End)
-    G --> Z(Choose Cloud Firestore or Cloud Datastore for NoSQL)
-    I --> Z(Choose Cloud Spanner for transactions)
-    J --> Z(Choose Cloud Firestore or Cloud Datastore for NoSQL)
-    L --> Z(Choose Cloud IoT Core or Cloud Pub/Sub with InfluxDB or OpenTSDB for time-series data)
-    P --> Z(Choose Cloud Firestore or Cloud Datastore for text search)
-    M --> Z(Choose a database based on other requirements)
+    G --> Z(End)
+    I --> Z(End)
+    J --> Z(End)
+    L --> Z(End)
+    P --> Z(End)
+    M --> Z(End)
+
+    style F fill:lightgreen,stroke:#333,stroke-width:1px;
+    style G fill:lightgreen,stroke:#333,stroke-width:1px;
+    style I fill:lightgreen,stroke:#333,stroke-width:1px;
+    style J fill:lightgreen,stroke:#333,stroke-width:1px;
+    style L fill:lightgreen,stroke:#333,stroke-width:1px;
+    style P fill:lightgreen,stroke:#333,stroke-width:1px;
+    style S fill:lightgreen,stroke:#333,stroke-width:1px;
 
 ```
