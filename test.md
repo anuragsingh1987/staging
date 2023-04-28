@@ -1,5 +1,5 @@
 ```mermaid
-graph LR
+graph TD
     A(Start) --> B(Is the data structured or unstructured?)
     B --> C{Structured?}
     C --> |Yes| D(Is it relational data?)
