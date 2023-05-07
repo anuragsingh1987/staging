@@ -1,5 +1,4 @@
-  
-<p style="text-align:center;"><img title="a title" alt="Alt text" src="/git-resources/github_logo.png"></p>
+ <p style="text-align:center;"><img title="a title" alt="Alt text" src="/git-resources/github_logo.png"></p>
 
 # Using GitHub with PlayPen
 
@@ -46,20 +45,14 @@ GitHub Actions is free for public repositories and offers a certain amount of fr
 
 In Git, branches are used to isolate development work from other branches. This allows multiple developers to work on different features or fixes simultaneously without interfering with each other's code. Here are some key concepts and commands related to Git branches:
 
-1.  Creating a new branch: Use the `git branch` command followed by the name of the new branch to create a new branch. For example, `git branch new-feature` creates a new branch called "new-feature".
-    
-2.  Switching to a branch: Use the `git checkout` command followed by the name of the branch to switch to it. For example, `git checkout new-feature` switches to the "new-feature" branch.
-    
-3.  Creating and switching to a new branch in one command: Use the `git checkout -b` command followed by the name of the new branch to create a new branch and switch to it in one step. For example, `git checkout -b new-feature` creates a new branch called "new-feature" and switches to it.
-    
-4.  Merging branches: Use the `git merge` command followed by the name of the branch to merge it into the current branch. For example, if you're on the "master" branch and want to merge the "new-feature" branch, run `git merge new-feature`.
-    
-5.  Viewing branches: Use the `git branch` command to view a list of branches in the repository. The current branch will be marked with an asterisk.
-    
-6.  Deleting branches: Use the `git branch -d` command followed by the name of the branch to delete it. For example, `git branch -d new-feature` deletes the "new-feature" branch.
-    
-7.  Renaming branches: Use the `git branch -m` command followed by the new name to rename a branch. For example, `git branch -m old-branch new-branch` renames the "old-branch" to "new-branch".
-    
+
+1. Creating a new branch: Use the `git branch` command followed by the name of the new branch to create a new branch. For example, `git branch new-feature` creates a new branch called "new-feature".
+2. Switching to a branch: Use the `git checkout` command followed by the name of the branch to switch to it. For example, `git checkout new-feature` switches to the "new-feature" branch.
+3. Creating and switching to a new branch in one command: Use the `git checkout -b` command followed by the name of the new branch to create a new branch and switch to it in one step. For example, `git checkout -b new-feature` creates a new branch called "new-feature" and switches to it.
+4. Merging branches: Use the `git merge` command followed by the name of the branch to merge it into the current branch. For example, if you're on the "master" branch and want to merge the "new-feature" branch, run `git merge new-feature`.
+5. Viewing branches: Use the `git branch` command to view a list of branches in the repository. The current branch will be marked with an asterisk.
+6. Deleting branches: Use the `git branch -d` command followed by the name of the branch to delete it. For example, `git branch -d new-feature` deletes the "new-feature" branch.
+7. Renaming branches: Use the `git branch -m` command followed by the new name to rename a branch. For example, `git branch -m old-branch new-branch` renames the "old-branch" to "new-branch".
 
 These are just a few of the many commands and concepts related to Git branches. By mastering these basic commands, you'll be able to manage your Git repository and collaborate with other developers more effectively.
 
@@ -67,9 +60,9 @@ These are just a few of the many commands and concepts related to Git branches. 
 
 Git push, git pull, and git fork are three different Git operations that are commonly used in software development.
 
- - **Git push** is used to upload local changes to a remote repository. When you commit changes to your local Git repository, you can use the git push command to send those changes to a remote repository, such as on GitHub or GitLab. This is useful for sharing your changes with others or backing up your work.
- - **Git pull** is used to download changes from a remote repository. When you want to update your local repository with changes that have been made on a remote repository, you can use the git pull command to fetch and merge those changes into your local repository.
- - **Git fork** is used to create a copy of a remote repository. When you want to contribute to a project that is hosted on a remote repository, you can use the git fork command to create your own copy of the repository. This allows you to make changes to the code without affecting the original project. You can then make a pull request to the original repository to propose your changes.
+* **Git push** is used to upload local changes to a remote repository. When you commit changes to your local Git repository, you can use the git push command to send those changes to a remote repository, such as on GitHub or GitLab. This is useful for sharing your changes with others or backing up your work.
+* **Git pull** is used to download changes from a remote repository. When you want to update your local repository with changes that have been made on a remote repository, you can use the git pull command to fetch and merge those changes into your local repository.
+* **Git fork** is used to create a copy of a remote repository. When you want to contribute to a project that is hosted on a remote repository, you can use the git fork command to create your own copy of the repository. This allows you to make changes to the code without affecting the original project. You can then make a pull request to the original repository to propose your changes.
 
 In summary, git push is used to upload local changes to a remote repository, git pull is used to download changes from a remote repository, and git fork is used to create a copy of a remote repository for contribution purposes.
 
@@ -78,44 +71,32 @@ In summary, git push is used to upload local changes to a remote repository, git
 
 Here are some common Git commands that you can use to manage your Git repository:
 
-1.  `git init`: Initializes a new Git repository in your current directory.
-    
-2.  `git add`: Adds files to the staging area for a commit.
-    
-3.  `git commit`: Creates a new commit with the changes in the staging area.
-    
-4.  `git clone`: Copies a remote repository to your local machine.
-    
-5.  `git pull`: Fetches and merges changes from a remote repository to your local machine.
-    
-6.  `git push`: Sends committed changes to a remote repository.
-    
-7.  `git status`: Shows the current status of the Git repository, including any changes that have been made.
-    
-8.  `git log`: Displays the commit history of the repository.
-    
-9.  `git branch`: Shows a list of branches in the repository.
-    
-10.  `git checkout`: Switches to a different branch in the repository.
-    
-11.  `git merge`: Combines changes from one branch to another.
-    
-12.  `git remote`: Manages connections to remote repositories.
-    
-13.  `git stash`: Temporarily saves changes that are not ready to be committed.
-    
+
+ 1. `git init`: Initializes a new Git repository in your current directory.
+ 2. `git add`: Adds files to the staging area for a commit.
+ 3. `git commit`: Creates a new commit with the changes in the staging area.
+ 4. `git clone`: Copies a remote repository to your local machine.
+ 5. `git pull`: Fetches and merges changes from a remote repository to your local machine.
+ 6. `git push`: Sends committed changes to a remote repository.
+ 7. `git status`: Shows the current status of the Git repository, including any changes that have been made.
+ 8. `git log`: Displays the commit history of the repository.
+ 9. `git branch`: Shows a list of branches in the repository.
+10. `git checkout`: Switches to a different branch in the repository.
+11. `git merge`: Combines changes from one branch to another.
+12. `git remote`: Manages connections to remote repositories.
+13. `git stash`: Temporarily saves changes that are not ready to be committed.
 
 These are just a few of the many Git commands available. By mastering these basic commands, you'll be able to manage your Git repository with confidence and efficiency.
 
 ## Here are some resources you can use to learn Git and GitHub:
 
-- Official Git documentation: https://git-scm.com/docs
-- GitHub's Git cheat sheet: https://github.github.com/training-kit/downloads/github-git-cheat-sheet/
-- Atlassian's Git tutorials: https://www.atlassian.com/git
-- Git Immersion interactive tutorial: https://gitimmersion.com/
-- Pro Git book: https://git-scm.com/book/en/v2
-- GitKraken's Git command reference: https://www.gitkraken.com/git-commands
-- GitLab's Git tutorial: https://docs.gitlab.com/ee/git/
+* Official Git documentation: https://git-scm.com/docs
+* GitHub's Git cheat sheet: https://github.github.com/training-kit/downloads/github-git-cheat-sheet/
+* Atlassian's Git tutorials: https://www.atlassian.com/git
+* Git Immersion interactive tutorial: https://gitimmersion.com/
+* Pro Git book: https://git-scm.com/book/en/v2
+* GitKraken's Git command reference: https://www.gitkraken.com/git-commands
+* GitLab's Git tutorial: https://docs.gitlab.com/ee/git/
 
 
 These resources provide a wealth of information about Git, from basic commands and concepts to advanced techniques and workflows. By using these resources, you can become a more effective and efficient Git user.
