@@ -200,42 +200,40 @@ sql
 Copy code
 -- Create a table for products
 CREATE TABLE Products (
-  ProductID INT64 NOT NULL,
-  Name STRING(255) NOT NULL,
-  Description STRING(MAX),
-  Price DECIMAL(10, 2) NOT NULL,
-  PRIMARY KEY (ProductID)
+  ProductID SERIAL PRIMARY KEY,
+  Name VARCHAR(255) NOT NULL,
+  Description TEXT,
+  Price DECIMAL(10, 2) NOT NULL
 );
 
 -- Create a table for customers
 CREATE TABLE Customers (
-  CustomerID INT64 NOT NULL,
-  FirstName STRING(50) NOT NULL,
-  LastName STRING(50) NOT NULL,
-  Email STRING(100) NOT NULL,
-  PRIMARY KEY (CustomerID)
+  CustomerID SERIAL PRIMARY KEY,
+  FirstName VARCHAR(50) NOT NULL,
+  LastName VARCHAR(50) NOT NULL,
+  Email VARCHAR(100) NOT NULL
 );
 
 -- Create a table for orders
 CREATE TABLE Orders (
-  OrderID INT64 NOT NULL,
-  CustomerID INT64 NOT NULL,
+  OrderID SERIAL PRIMARY KEY,
+  CustomerID INT NOT NULL,
   OrderDate TIMESTAMP NOT NULL,
   TotalAmount DECIMAL(10, 2) NOT NULL,
-  Status STRING(20) NOT NULL,
-  PRIMARY KEY (CustomerID, OrderID),
-  INTERLEAVE IN PARENT Customers ON DELETE CASCADE
+  Status VARCHAR(20) NOT NULL,
+  FOREIGN KEY (CustomerID) REFERENCES Customers (CustomerID) ON DELETE CASCADE
 );
 
 -- Create a table for order items
 CREATE TABLE OrderItems (
-  OrderID INT64 NOT NULL,
-  ProductID INT64 NOT NULL,
-  Quantity INT64 NOT NULL,
+  OrderID INT NOT NULL,
+  ProductID INT NOT NULL,
+  Quantity INT NOT NULL,
   Price DECIMAL(10, 2) NOT NULL,
   PRIMARY KEY (OrderID, ProductID),
   FOREIGN KEY (OrderID) REFERENCES Orders (OrderID)
 );
+
 
 
 In this sample schema:
