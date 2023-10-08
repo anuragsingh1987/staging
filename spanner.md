@@ -57,6 +57,78 @@ graph LR
     L --> Z(End)
     P --> Z(End)
     M --> Z(End)
+
+
+
+
+In a banking application using Google Cloud Spanner, you would typically need several linked tables to manage various aspects of customer accounts, transactions, and related information. Below, I'll provide an example of four linked tables commonly used in banking:
+
+Customers Table:
+This table stores information about bank customers.
+
+sql
+Copy code
+CREATE TABLE Customers (
+    CustomerID INT64 NOT NULL,
+    FirstName STRING(MAX),
+    LastName STRING(MAX),
+    Email STRING(MAX),
+    Phone STRING(MAX),
+    Address STRING(MAX),
+    PRIMARY KEY (CustomerID)
+);
+
+
+Accounts Table:
+This table keeps track of customer accounts. It links to the Customers table using the CustomerID as a foreign key.
+
+sql
+Copy code
+CREATE TABLE Accounts (
+    AccountID INT64 NOT NULL,
+    CustomerID INT64,
+    AccountNumber STRING(MAX),
+    AccountType STRING(MAX),
+    Balance DECIMAL(18, 2),
+    PRIMARY KEY (AccountID),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+
+Transactions Table:
+This table records transactions associated with customer accounts. It links to the Accounts table using the AccountID as a foreign key.
+
+sql
+Copy code
+CREATE TABLE Transactions (
+    TransactionID INT64 NOT NULL,
+    AccountID INT64,
+    TransactionType STRING(MAX),
+    Amount DECIMAL(18, 2),
+    TransactionDate TIMESTAMP,
+    PRIMARY KEY (TransactionID),
+    FOREIGN KEY (AccountID) REFERENCES Accounts(AccountID)
+);
+
+
+Payments Table:
+This table stores information about payments between accounts. It links to the Accounts table twice, once for the source account and once for the destination account.
+
+sql
+Copy code
+CREATE TABLE Payments (
+    PaymentID INT64 NOT NULL,
+    SourceAccountID INT64,
+    DestinationAccountID INT64,
+    Amount DECIMAL(18, 2),
+    PaymentDate TIMESTAMP,
+    PRIMARY KEY (PaymentID),
+    FOREIGN KEY (SourceAccountID) REFERENCES Accounts(AccountID),
+    FOREIGN KEY (DestinationAccountID) REFERENCES Accounts(AccountID)
+);
+
+
+These four linked tables represent a simplified schema for a banking application in Google Cloud Spanner. Customers are linked to their accounts, and transactions and payments are linked to the respective accounts. This schema can be expanded and customized to meet the specific requirements of your banking application, including additional tables for compliance, auditing, and more complex financial products.
 ```
 
 
