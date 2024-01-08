@@ -36,6 +36,22 @@ Click on "Cloud Spanner API" in the search results.
 Click the "Enable" button.
 
 
+Enable the Spanner API:
+Use the following command to enable the Cloud Spanner API:
+
+bash
+Copy code
+gcloud services enable [spanner.googleapis.com](http://spanner.googleapis.com)
+Confirming Enablement:
+Once the command executes successfully, it will enable the Spanner API for the selected project. You can confirm by visiting the Google Cloud Console or by using:
+
+bash
+Copy code
+gcloud services list --enabled
+This command will display a list of enabled services in your project, including [spanner.googleapis.com](http://spanner.googleapis.com).
+
+
+
 
 
 To deploy a Google Cloud Spanner instance using Terraform, you'll need to have Terraform installed and configured with Google Cloud credentials. Here are the steps to deploy a Cloud Spanner instance using Terraform:
